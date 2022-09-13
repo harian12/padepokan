@@ -14,4 +14,5 @@ func RouteV1(r *gin.Engine) {
 
 	transaction := v1.Group("transaction")
 	transaction.POST("create", transaction_controller.CreateTransaction)
+	transaction.POST("report", transaction_controller.ReportTransaction)
 }
