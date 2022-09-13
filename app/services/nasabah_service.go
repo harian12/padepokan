@@ -7,7 +7,8 @@ import (
 )
 
 type INasabahService interface {
-	GetNasabah() ([]models.Nasabah, error)
+	GetNasabah() ([]dto.ResGetNasabah, error)
+	GetPointNasabah() ([]dto.ResGetPointNasabah, error)
 	CreateNasabah(data dto.Nasabah) (models.Nasabah, error)
 }
 
@@ -19,8 +20,11 @@ func NewNasabahService(nasabahRepo repositories.INasabahRepository) *nasabahServ
 	return &nasabahService{nasabahRepo: nasabahRepo}
 }
 
-func (c *nasabahService) GetNasabah() ([]models.Nasabah, error) {
+func (c *nasabahService) GetNasabah() ([]dto.ResGetNasabah, error) {
 	return c.nasabahRepo.GetNasabah()
+}
+func (c *nasabahService) GetPointNasabah() ([]dto.ResGetPointNasabah, error) {
+	return c.nasabahRepo.GetPointNasabah()
 }
 
 func (c *nasabahService) CreateNasabah(data dto.Nasabah) (models.Nasabah, error) {
