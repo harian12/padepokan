@@ -10,6 +10,7 @@ import (
 
 type ITransactionService interface {
 	CreateTransaction(dataTrx dto.Transaction) (models.Transaction, error)
+	ReportTransaction(data dto.Report) ([]dto.ResReport, error)
 }
 
 type transactionService struct {
@@ -74,4 +75,8 @@ func (s *transactionService) CreateTransaction(dataTrx dto.Transaction) (models.
 
 	data, err := s.transactionRepo.CreateTransaction(transaction, totalPoin)
 	return data, err
+}
+
+func (s *transactionService) ReportTransaction(data dto.Report) ([]dto.ResReport, error) {
+	return s.transactionRepo.ReportTransaction(data)
 }
