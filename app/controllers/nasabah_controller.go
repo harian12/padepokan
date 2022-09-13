@@ -12,6 +12,7 @@ import (
 
 type INasabahController interface {
 	GetMasabah(ctx *gin.Context)
+	GetPointMasabah(ctx *gin.Context)
 	CreateNasabah(ctx *gin.Context)
 }
 
@@ -26,6 +27,18 @@ func NewNasabahController(nasabahService services.INasabahService) *nasabahContr
 func (c *nasabahController) GetMasabah(ctx *gin.Context) {
 
 	data, err := c.nasabahService.GetNasabah()
+	if err != nil {
+		logger.Error(ctx, err.Error(), err)
+		ctx.JSON(http.StatusOK, response.ResponseError(err.Error()))
+		return
+	}
+
+	ctx.JSON(http.StatusOK, response.ResponseSuccess(data, "success"))
+	return
+}
+func (c *nasabahController) GetPointMasabah(ctx *gin.Context) {
+
+	data, err := c.nasabahService.GetPointNasabah()
 	if err != nil {
 		logger.Error(ctx, err.Error(), err)
 		ctx.JSON(http.StatusOK, response.ResponseError(err.Error()))
