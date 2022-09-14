@@ -1,0 +1,511 @@
+{
+	"info": {
+		"_postman_id": "b1fd01fd-a1cb-4c68-b7d3-9857817e3d41",
+		"name": "padepokan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5458392"
+	},
+	"item": [
+		{
+			"name": "nasabah",
+			"item": [
+				{
+					"name": "get nasabah",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/v1/nasabah/data",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"nasabah",
+								"data"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get nasabah success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:3000/v1/nasabah/data",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"nasabah",
+										"data"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 13 Sep 2022 19:10:42 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "129"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"account_id\": 1,\n            \"name\": \"harians\"\n        },\n        {\n            \"account_id\": 2,\n            \"name\": \"hariansyah\"\n        }\n    ],\n    \"error\": false,\n    \"message\": \"success\",\n    \"status\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "create nasabah",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"rians\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/v1/nasabah/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"nasabah",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create nasabah error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/v1/nasabah/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"nasabah",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 13 Sep 2022 19:10:59 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [],\n    \"error\": true,\n    \"message\": \"Name is a required field\",\n    \"status\": false\n}"
+						},
+						{
+							"name": "create nasabah success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"rians\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/v1/nasabah/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"nasabah",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 13 Sep 2022 19:11:31 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "209"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"account_id\": 3,\n        \"name\": \"rians\",\n        \"total_point\": 0,\n        \"created_at\": \"2022-09-14T02:11:31.577+07:00\",\n        \"updated_at\": \"2022-09-14T02:11:31.577+07:00\"\n    },\n    \"error\": false,\n    \"message\": \"Data berhasil disimpan\",\n    \"status\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "get total point nasabah",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/v1/nasabah/point",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"nasabah",
+								"point"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get total point nasabah success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:3000/v1/nasabah/point",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"nasabah",
+										"point"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 13 Sep 2022 19:11:50 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "210"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"account_id\": 1,\n            \"name\": \"harians\",\n            \"total_point\": 20\n        },\n        {\n            \"account_id\": 2,\n            \"name\": \"hariansyah\",\n            \"total_point\": 0\n        },\n        {\n            \"account_id\": 3,\n            \"name\": \"rians\",\n            \"total_point\": 0\n        }\n    ],\n    \"error\": false,\n    \"message\": \"success\",\n    \"status\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "transaksi",
+			"item": [
+				{
+					"name": "create transaksi",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"account_id\":0,\n    \"transaction_date\": \"2017-03-15\",\n    \"description\" : \"Beli Pulsa\",\n    \"debit_credit_status\": \"D\",\n    \"amount\":20000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/v1/transaction/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"transaction",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create transaksi error validate",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"account_id\":0,\n    \"transaction_date\": \"2017-03-15\",\n    \"description\" : \"Beli Pulsa\",\n    \"debit_credit_status\": \"D\",\n    \"amount\":20000\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/v1/transaction/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"transaction",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 13 Sep 2022 19:12:52 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "81"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [],\n    \"error\": true,\n    \"message\": \"AccountId is a required field\",\n    \"status\": false\n}"
+						},
+						{
+							"name": "create transaksi success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"account_id\":1,\n    \"transaction_date\": \"2017-03-15\",\n    \"description\" : \"Beli Pulsa\",\n    \"debit_credit_status\": \"D\",\n    \"amount\":20000\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/v1/transaction/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"transaction",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 13 Sep 2022 19:13:51 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "279"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 12,\n        \"account_id\": 1,\n        \"description\": \"Beli Pulsa\",\n        \"debit_credit_status\": \"D\",\n        \"amount\": 20000,\n        \"transaction_date\": \"2017-03-15T00:00:00Z\",\n        \"created_at\": \"2022-09-14T02:13:51.95+07:00\",\n        \"updated_at\": \"2022-09-14T02:13:51.95+07:00\"\n    },\n    \"error\": false,\n    \"message\": \"success\",\n    \"status\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "report",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"account_id\" : 1,\n    \"start_date\" : \"01/01/2017\",\n    \"end_date\" : \"15/03/2017\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/v1/transaction/report",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"transaction",
+								"report"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "report success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"account_id\" : 1,\n    \"start_date\" : \"01/01/2017\",\n    \"end_date\" : \"15/03/2017\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/v1/transaction/report",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"transaction",
+										"report"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 13 Sep 2022 20:06:03 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"transaction_date\": \"2017-01-01\",\n            \"description\": \"Setor Tunai\",\n            \"amount\": 0,\n            \"debit\": \"-\",\n            \"credit\": \"200.000\"\n        },\n        {\n            \"transaction_date\": \"2017-01-05\",\n            \"description\": \"Beli Pulsa\",\n            \"amount\": 0,\n            \"debit\": \"10.000\",\n            \"credit\": \"-\"\n        },\n        {\n            \"transaction_date\": \"2017-01-06\",\n            \"description\": \"Bayar Listrik\",\n            \"amount\": 0,\n            \"debit\": \"70.000\",\n            \"credit\": \"-\"\n        },\n        {\n            \"transaction_date\": \"2017-01-07\",\n            \"description\": \"Tarik Tunai\",\n            \"amount\": 0,\n            \"debit\": \"100.000\",\n            \"credit\": \"-\"\n        },\n        {\n            \"transaction_date\": \"2017-02-01\",\n            \"description\": \"Setor Tunai\",\n            \"amount\": 0,\n            \"debit\": \"-\",\n            \"credit\": \"300.000\"\n        },\n        {\n            \"transaction_date\": \"2017-02-15\",\n            \"description\": \"Tarik Tunai\",\n            \"amount\": 0,\n            \"debit\": \"50.000\",\n            \"credit\": \"-\"\n        },\n        {\n            \"transaction_date\": \"2017-02-20\",\n            \"description\": \"Beli Pulsa\",\n            \"amount\": 0,\n            \"debit\": \"40.000\",\n            \"credit\": \"-\"\n        },\n        {\n            \"transaction_date\": \"2017-02-28\",\n            \"description\": \"Tarik Tunai\",\n            \"amount\": 0,\n            \"debit\": \"50.000\",\n            \"credit\": \"-\"\n        },\n        {\n            \"transaction_date\": \"2017-03-01\",\n            \"description\": \"Setor Tunai\",\n            \"amount\": 0,\n            \"debit\": \"-\",\n            \"credit\": \"50.000\"\n        },\n        {\n            \"transaction_date\": \"2017-03-07\",\n            \"description\": \"Bayar Listrik\",\n            \"amount\": 0,\n            \"debit\": \"125.000\",\n            \"credit\": \"-\"\n        },\n        {\n            \"transaction_date\": \"2017-03-15\",\n            \"description\": \"Beli Pulsa\",\n            \"amount\": 0,\n            \"debit\": \"20.000\",\n            \"credit\": \"-\"\n        },\n        {\n            \"transaction_date\": \"2017-03-15\",\n            \"description\": \"Beli Pulsa\",\n            \"amount\": 0,\n            \"debit\": \"20.000\",\n            \"credit\": \"-\"\n        },\n        {\n            \"transaction_date\": \"2017-03-15\",\n            \"description\": \"Beli Pulsa\",\n            \"amount\": 0,\n            \"debit\": \"20.000\",\n            \"credit\": \"-\"\n        }\n    ],\n    \"error\": false,\n    \"message\": \"success\",\n    \"status\": true\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
