@@ -6,6 +6,10 @@ silahkan buat file **.env** terlebih dahulu detail isi file **.env** ada di file
 jalankan command **go mod vendor** untuk vendoring 3rd party library yang digunakan:
 > go mod vendor
 
+jalankan perintah dibawah untuk init testing:
+> cd test
+> go test
+
 kemudian jalankan perintah berikut untuk membuat table ke dalam DB:
 > go run main.go db:migrate
 
