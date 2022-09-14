@@ -8,7 +8,7 @@ import (
 
 func AppRoute() {
 
-	appName := helpers.GetEnv("APP_NAME", "Chat")
+	appName := helpers.GetEnv("APP_NAME", "padepokan")
 	appEnv := helpers.GetEnv("APP_ENV", "development")
 	appPort := helpers.GetEnv("APP_PORT", "8080")
 
