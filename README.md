@@ -8,6 +8,7 @@ jalankan command **go mod vendor** untuk vendoring 3rd party library yang diguna
 
 jalankan perintah dibawah untuk init testing:
 > cd test
+
 > go test
 
 kemudian jalankan perintah berikut untuk membuat table ke dalam DB:
