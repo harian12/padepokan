@@ -17,7 +17,7 @@ type Report struct {
 type ResReport struct {
 	TransactionDate string `json:"transaction_date"`
 	Description     string `json:"description"`
-	Amount          uint64 `json:"amount"`
+	Amount          string `json:"amount"`
 	Debit           string `json:"debit"`
 	Credit          string `json:"credit"`
 }
