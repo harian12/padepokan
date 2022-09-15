@@ -60,6 +60,6 @@ func (r *transactionRepository) ReportTransaction(data dto.Report) ([]dto.ResRep
 		return nil, err
 	}
 	var trx []dto.ResReport
-	err = r.db.Table("transactions").Select("DATE_FORMAT(transaction_date,'%Y-%m-%d') as transaction_date, description, IF(debit_credit_status = 'D',format(amount,0,'id_ID'), '-') as debit,IF(debit_credit_status = 'C',format(amount,0,'id_ID'), '-') as credit, format(amount,0,'id_ID')").Where("account_id = ? and transaction_date between ? and ?", data.AccountId, start, end).Find(&trx).Error
+	err = r.db.Table("transactions").Select("DATE_FORMAT(transaction_date,'%Y-%m-%d') as transaction_date, description, IF(debit_credit_status = 'D',format(amount,0,'id_ID'), '-') as debit,IF(debit_credit_status = 'C',format(amount,0,'id_ID'), '-') as credit, format(amount,0,'id_ID') as amount").Where("account_id = ? and transaction_date between ? and ?", data.AccountId, start, end).Find(&trx).Error
 	return trx, err
 }
